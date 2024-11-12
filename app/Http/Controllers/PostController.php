@@ -23,7 +23,7 @@ class PostController extends Controller
     {
         $posts = Post::all();
 
-        return view('admin.posts.create', compact('posts'));
+        return view('Admin.posts.create', compact('posts'));
     }
 
     /**
