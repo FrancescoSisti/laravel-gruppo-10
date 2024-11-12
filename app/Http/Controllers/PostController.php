@@ -12,15 +12,18 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('Admin.posts.index', compact('posts'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Post $post)
     {
-        //
+        $posts = Post::all();
+
+        return view('Admin.posts.create', compact('posts'));
     }
 
     /**
